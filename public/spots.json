@@ -1,0 +1,28 @@
+[
+    {
+      "id": 1,
+      "image_url": "https://i.pinimg.com/564x/b8/2e/33/b82e332473712b0f1b56b5b331970d5b.jpg" ,
+      "tourists_spot_name": "Eiffel Tower",
+      "country_name": "France",
+      "location": "Paris",
+      "short_description": "Iconic iron lattice tower",
+      "average_cost": 1000,
+      "seasonality": "Summer",
+      "travel_time": "7 days",
+      "total_visitors_per_year": 10000
+    },
+    {
+      "id": 2,
+      "image_url": "https://i.pinimg.com/564x/c9/dd/61/c9dd61ea6e1f8bbb13af7da082d0df59.jpg",
+      "tourists_spot_name": "Colosseum",
+      "country_name": "Italy",
+      "location": "Rome",
+      "short_description": "Ancient amphitheater",
+      "average_cost": 800,
+      "seasonality": "Spring",
+      "travel_time": "5 days",
+      "total_visitors_per_year": 12000
+    }
+  
+  ]
+  
