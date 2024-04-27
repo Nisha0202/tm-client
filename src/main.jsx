@@ -8,7 +8,6 @@ import './index.css'
 import Root from './root/Root';
 import Home from './pages/Home';
 import ErrorPage from './components/ErrorPage';
-import CardDetails from './components/CardDetails';
 import Login from './pages/Login'
 import SignUp from './pages/Signup';
 import FirbaseProvider from './FirebaseProbider/FirbaseProvider';
@@ -18,6 +17,7 @@ import Clients from './pages/Clients'
 import AddList from './pages/AddList';
 import MyList from './pages/MyList';
 import All from './pages/All';
+import Spotdetails from './components/Spotdetails';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,8 +30,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <CardDetails />,
-        loader: () => fetch('../spots.json')
+        element: <Spotdetails />,
+        loader: () => fetch("../spots.json").then((response) => response.json())
       },
       {
         path: "/login",
@@ -41,7 +41,6 @@ const router = createBrowserRouter([
         path: "/signup",
         element: <SignUp />,
       },
-    
       {
         path: "/update",
         element: <UpdateData/>,

@@ -6,7 +6,7 @@ export default function Slider() {
 
       <div className="p-6 m-4 text-center lg:text-left">
         <h1 className='text-3xl font-bold '>Welcome to TM</h1>
-        <p className='text-xl py-6'>Your favourate destination for finding amazing torist spots.</p>
+        <p className='text-xl py-6'>Your favourate destination for finding amazing tourist spots.</p>
       </div>
       <div className="carousel carousel-center max-w-xl p-4 space-x-4 bg-white rounded-box">
         <div className="carousel-item">
