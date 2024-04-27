@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import Slider from '../components/Slider';
 import Spots from '../components/Spots';
 import Countries from '../components/Countries';
-
+import About from './About'
 export default function Home() {
   return (
     <div className='container'>
@@ -13,7 +13,8 @@ export default function Home() {
       <Slider />
        <Countries/>
       <Spots />
-     
+      <About/>
+    
     </div>
   );
 }
