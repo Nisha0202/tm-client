@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { AuthContext } from '../FirebaseProbider/FirbaseProvider';
-
  import { useNavigate } from 'react-router-dom';
 const Card = ({ spots }) => {
 // Inside your component
@@ -21,8 +20,7 @@ const navigate = useNavigate();
   
   return (
     <div >
-       
-      <div className="card w-80 bg-base-100 md:w-80 border-2 p-4 rounded-md h-xs gap-4" data-aos="fade">
+      <div className="card w-80 bg-base-100 md:w-80 border-2 p-4 rounded-md h-xs gap-4">
                <img className='w-full h-80 rounded-md border-2' src={spots.image_url} alt={spots.tourists_spot_name} />
       <h2 className='font-bold text-xl text-center'>{spots.tourists_spot_name}</h2>
 

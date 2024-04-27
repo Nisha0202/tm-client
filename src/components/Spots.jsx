@@ -13,7 +13,8 @@ export default function Spots() {
     }, []);
   
   return (
-    <div className='flex justify-center items-center pb-12'>
+    <div className='flex flex-col justify-center items-center pb-12'>
+       <h1 className='my-12 text-2xl font-bold'>Tourist Spots</h1>
          <div className='flex flex-wrap flex-col gap-4 md:flex-row md:justify-between md:gap-12'>
 
 {data.map((spots, index) => (
