@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Slider() {
   return (
-    <div className='flex flex-col lg:flex-row gap-4 lg:justify-between items-center'>
+    <div className='flex flex-col lg:flex-row gap-4 lg:justify-between items-center mt-12'>
 
-      <div className="p-6 m-4 text-center lg:text-left">
+      <div className="p-6 mx-4 md:my-4 text-center lg:text-left">
         <h1 className='text-3xl font-bold '>Welcome to TM</h1>
         <p className='text-xl py-6'>Your favourate destination for finding amazing tourist spots in <span className='font-bold'>Euroupe</span>.</p>
       </div>
