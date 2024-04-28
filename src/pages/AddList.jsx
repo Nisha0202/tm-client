@@ -1,9 +1,6 @@
 import React, { useContext, useState} from 'react'
 import { AuthContext } from '../FirebaseProbider/FirbaseProvider'
 import Swal from 'sweetalert2';
-
-
-
 const AddList = () => {
 
     const { usern } = useContext(AuthContext);
@@ -38,6 +35,7 @@ const AddList = () => {
         { value: 'Switzerland', label: 'Switzerland' },
     ];
 
+
     const handleSubmit = (e) => {
         e.preventDefault();
           // Check if any required fields are empty (except for read-only ones)
@@ -53,12 +51,28 @@ const AddList = () => {
               return;
           }
         console.log('Form data submitted:', formData);
-        Swal.fire({
-            icon: 'success',
-            title: 'Form Submitted!',
-            text: 'Your data has been successfully submitted.',
-        });
+
+         fetch('http://localhost:5000//touristspots', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Form Submitted!',
+                    text: 'Your data has been successfully submitted.',
+                });
+            }
+        })
     };
+
+  
 
     return (
         <div className='flex flex-col items-center justify-center min-h-screen'>
