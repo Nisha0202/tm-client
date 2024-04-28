@@ -30,9 +30,10 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <Spotdetails />,
-        loader: () => fetch("../spots.json").then((response) => response.json())
-      },
+        element: <Spotdetails />, 
+        loader: () => fetch('../spots.json').then((response) => response.json())
+    },
+    
       {
         path: "/login",
         element: <Login />,

@@ -1,8 +1,14 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# npm package:
+1. React + vite
+2. react router
+3. tailwind css
+4. daisy ui
+5. swiper
+6. Animate.css
+7. react-tooltip
+8. react-icon
+9. sweet-alert
+10. react-hook-form
+11. react-helmet

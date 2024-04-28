@@ -8,7 +8,7 @@ export default function Slider() {
         <h1 className='text-3xl font-bold '>Welcome to TM</h1>
         <p className='text-xl py-6'>Your favourate destination for finding amazing tourist spots in <span className='font-bold'>Euroupe</span>.</p>
       </div>
-      <div className="carousel carousel-center max-w-xl p-4 space-x-4 bg-white rounded-box">
+      <div className="carousel carousel-center max-w-xl p-4 space-x-4 bg-transparent rounded-box">
         <div className="carousel-item">
           <img src="https://i.pinimg.com/564x/fa/95/98/fa95986f2c408098531ca7cc78aee3a4.jpg" className="rounded-box h-96 border-2" />
         </div>
