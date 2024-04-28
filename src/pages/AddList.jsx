@@ -23,7 +23,6 @@ const AddList = () => {
         }));
     };
 
-    
     const countryOptions = [
       { value: 'France', label: 'France' },
       { value: 'Italy', label: 'Italy' },
@@ -31,124 +30,38 @@ const AddList = () => {
       { value: 'England', label: 'England' },
       { value: 'Netherlands', label: 'Netherlands' },
       { value: 'Switzerland', label: 'Switzerland' },
-  ];
+    ];
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission (e.g., send data to backend)
         console.log('Form data submitted:', formData);
     };
 
     return (
-        <div className='flex flex-col gap-3 items-center my-6'>
-            <h2 className='text-xl font-bold mb-6'>Add Tourists Spot</h2>
-            <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
-                <div className="flex justify-between">
-                    <label>Image URL:</label>
-                    <input
-                    className='border-2 w-2/3'
-                        type="text"
-                        name="image"
-                        value={formData.image}
-                        onChange={handleChange}
-                    />
+        <div className='flex flex-col items-center justify-center min-h-screen'>
+            <h2 className='text-2xl font-bold mb-6'>Add Tourists Spot</h2>
+            <form onSubmit={handleSubmit} className='w-full max-w-md bg-transparent border-2 rounded px-8 pt-6 pb-8 mb-4'>
+                {Object.keys(formData).map((key) => (
+                    <div className='mb-4' key={key}>
+                        <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor={key}>
+                            {key.charAt(0).toUpperCase() + key.slice(1)}
+                        </label>
+                        <input
+                            className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                            id={key}
+                            type='text'
+                            placeholder={key.charAt(0).toUpperCase() + key.slice(1)}
+                            name={key}
+                            value={formData[key]}
+                            onChange={handleChange}
+                        />
+                    </div>
+                ))}
+                <div className='flex items-center justify-end'>
+                    <button className=' hover:bg-teal-700 bg-teal-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' type='submit'>
+                        Submit
+                    </button>
                 </div>
-                <div className="flex justify-between">
-                    <label>Spot Name:</label>
-                    <input     className='border-2 w-2/3'
-                        type="text"
-                        name="tourists_spot_name"
-                        value={formData.tourists_spot_name}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div className="flex justify-between">
-                    <label>Country:</label>
-                    <select
-                        name="country_name"
-                        value={formData.country_name}
-                        onChange={handleChange}
-                    >
-                        <option value="">Select a country</option>
-                        {countryOptions.map((country) => (
-                            <option key={country.value} value={country.value}>
-                                {country.label}
-                            </option>
-                        ))}
-                    </select>
-                </div>
-                <div className="flex justify-between">
-                    <label>Location:</label>
-                    <input     className='border-2 w-2/3'
-                        type="text"
-                        name="location"
-                        value={formData.location}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div className="flex justify-between">
-                    <label>Description:</label>
-                    <input     className='border-2 w-2/3'
-                        type="text"
-                        name="short_description"
-                        value={formData.short_description}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div className="flex justify-between">
-                    <label>Average Cost (£):</label>
-                    <input     className='border-2 w-2/3'
-                        type="number"
-                        name="average_cost"
-                        value={formData.average_cost}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div className="flex justify-between">
-                    <label>Seasonality:</label>
-                    <input     className='border-2 w-2/3 h-12'
-                        type="number"
-                        name="seasonality"
-                        value={formData.seasonality}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div className="flex justify-between">
-                    <label>Travel Time:</label>
-                    <input     className='border-2 w-2/3'
-                        type="text"
-                        name="travel_time"
-                        value={formData.travel_time}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div className="flex justify-between">
-                    <label>Visitors/Per Year:</label>
-                    <input     className='border-2 w-2/3'
-                        type="number"
-                        name="total_visitors_per_year"
-                        value={formData.total_visitors_per_year}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div className="flex justify-between">
-                    <label>User Email:</label>
-                    <input     className='border-2 w-2/3'
-                        type="email"
-                        name="user_email"
-                        value={formData.user_email}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div className="flex justify-between">
-                    <label>User Name:</label>
-                    <input     className='border-2 w-2/3'
-                        type="text"
-                        name="user_name"
-                        value={formData.user_name}
-                        onChange={handleChange}
-                    />
-                </div>
-                <button type="submit" className='btn bg-indigo-300 text-black'>Add</button>
             </form>
         </div>
     );
