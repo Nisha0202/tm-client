@@ -23,7 +23,7 @@ const navigate = useNavigate();
                <img className='w-full h-80 rounded-md border-2' src={spots.image_url} alt={spots.tourists_spot_name} />
       <h2 className='font-bold text-xl text-center'>{spots.tourists_spot_name}</h2>
       <p className='text-center text-wrap'>{spots.country_name}</p>
-      <div className='btn w-full rounded-md bg-indigo-300 mt-2' onClick={handleView}>View Details</div>
+      <div className='btn w-full rounded-md text-white bg-teal-800 mt-2' onClick={handleView}>View Details</div>
 
     </div>
     </div>
