@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const AddList = () => {
     const [formData, setFormData] = useState({
-        image: '',
+        image_url: '',
         tourists_spot_name: '',
         country_name: '',
         location: '',

@@ -1,12 +1,16 @@
 import React from 'react'
-
+import { Fade } from "react-awesome-reveal";
 export default function Slider() {
   return (
     <div className='flex flex-col lg:flex-row gap-4 lg:justify-between items-center mt-12'>
 
       <div className="p-6 mx-4 md:my-4 text-center lg:text-left">
-        <h1 className='text-3xl font-bold '>Welcome to TM</h1>
-        <p className='text-xl py-6'>Your favourate destination for finding amazing tourist spots in <span className='font-bold'>Euroupe</span>.</p>
+      <Fade cascade> <h1 className='text-3xl font-bold '>Welcome to TM</h1>  
+      <p className='text-xl py-6'>Your favourate destination for finding amazing tourist spots in <span className='font-bold'>Euroupe</span>.</p>
+      
+      </Fade>
+       
+      
       </div>
       <div className="carousel carousel-center max-w-xl p-4 space-x-4 bg-transparent rounded-box">
         <div className="carousel-item">

@@ -6,7 +6,7 @@
 3. tailwind css
 4. daisy ui
 5. swiper
-6. Animate.css
+6. react-awesome-reveal
 7. react-tooltip
 8. react-icon
 9. sweet-alert
