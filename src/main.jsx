@@ -60,6 +60,7 @@ const router = createBrowserRouter([
       {
         path: "/list",
         element: <MyList/>,
+        loader: () => fetch('http://localhost:5000/touristspots')
       },
       {
         path: "/addlist",

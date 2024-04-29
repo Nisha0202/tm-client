@@ -121,7 +121,20 @@
           "seasonality": "Winter",
           "travel_time": "7 days",
           "total_visitors_per_year": 7000
+        },
+        {
+          "id": 11,
+          "image_url": "https://i.imgur.com/xyz789.jpg",
+          "tourists_spot_name": "Jungfraujoch",
+          "country_name": "Switzerland",
+          "location": "Bernese Alps",
+          "short_description": "Top of Europe - Stunning mountain views",
+          "average_cost": 1200,
+          "seasonality": "Year-round",
+          "travel_time": "4 days",
+          "total_visitors_per_year": 20000
         }
+        
       ]
       
     
