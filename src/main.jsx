@@ -31,12 +31,13 @@ const router = createBrowserRouter([
       {
         path: "/details/:id",
         element: <Spotdetails />, 
-        // loader: () => fetch('http://localhost:5000/touristspots').then((response) => response.json())
+        loader: () => fetch('http://localhost:5000/touristspots')
+      
     },
     
       {
         path: "/login",
-        element: <Login />,
+        element: <Login />, 
       },
       {
         path: "/signup",

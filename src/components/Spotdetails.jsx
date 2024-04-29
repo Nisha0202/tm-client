@@ -20,10 +20,6 @@ const Spotdetails = () => {
       })
       .catch(error => console.error('Error:', error));
   }, [id]);
-
-
-  
-
   if (!spot) {
       return <div>Loading...</div>;
   }
@@ -53,6 +49,7 @@ const Spotdetails = () => {
 };
 
 export default Spotdetails;
+
   // useEffect(() => {
   //   // Fetch data from server
   //   fetch(`http://localhost:5000/touristspots/${id}`)
