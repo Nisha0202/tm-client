@@ -7,7 +7,7 @@ const CardDetails = () => {
 
   useEffect(() => {
     // Fetch the spot details based on the id
-    fetch('../spots.json')
+    fetch('http://localhost:5000/touristspots')
       .then((response) => response.json())
       .then((data) => {
         const foundSpot = data.find((spot) => spot.id === id);
@@ -15,9 +15,9 @@ const CardDetails = () => {
       });
   }, [id]);
 
-  // if (!spot) {
-  //   return <div>Loading...</div>;
-  // }
+  if (!spot) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="card-details">

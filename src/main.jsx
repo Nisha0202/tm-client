@@ -31,7 +31,7 @@ const router = createBrowserRouter([
       {
         path: "/details/:id",
         element: <Spotdetails />, 
-        loader: () => fetch('../spots.json').then((response) => response.json())
+        loader: () => fetch('http://localhost:5000/touristspots').then((response) => response.json())
     },
     
       {
@@ -61,6 +61,7 @@ const router = createBrowserRouter([
       {
         path: "/all",
         element: <All/>,
+        loader: () => fetch('http://localhost:5000/touristspots')
       },
       {
         path: "/clients",
