@@ -1,25 +1,30 @@
 import React, { useEffect, useState } from 'react';
 
-import { useParams } from 'react-router-dom'
+import { useLoaderData, useParams } from 'react-router-dom'
 
 const Spotdetails = () => {
-  const  {id}  = useParams();
-  console.log(id);
-  const [spot, setSpot] = useState(null);
-  useEffect(() => {
-    fetch(`http://localhost:5000/touristspots/${id}`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json(); // Parse response as JSON
-      })
-      .then(data => {
-        console.log('Received data:', data); // Log the data
-        setSpot(data);
-      })
-      .catch(error => console.error('Error:', error));
-  }, [id]);
+  // const  {id}  = useParams();
+  // console.log(id);
+  // const [spot, setSpot] = useState(null);
+  // useEffect(() => {
+  //   fetch(`http://localhost:5000/touristspots/${id}`)
+  //     .then(response => {
+  //       if (!response.ok) {
+  //         throw new Error('Network response was not ok');
+  //       }
+  //       return response.json(); // Parse response as JSON
+  //     })
+  //     .then(data => {
+  //       console.log('Received data:', data); // Log the data
+  //       setSpot(data);
+  //     })
+  //     .catch(error => console.error('Error:', error));
+  // }, [id]);
+  const spots = useLoaderData();
+  const { id } = useParams();
+  const spot = spots.find(spot => spot._id === id);
+  console.log(spot);
+
   if (!spot) {
       return <div>Loading...</div>;
   }
