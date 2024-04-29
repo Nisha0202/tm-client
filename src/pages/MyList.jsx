@@ -25,7 +25,7 @@
 // }
 
 import React, { useState, useEffect, useContext } from 'react';
-import { useLoaderData} from 'react-router-dom';
+import { Link, useLoaderData} from 'react-router-dom';
 import { AuthContext } from '../FirebaseProbider/FirbaseProvider';
 import Swal from 'sweetalert2';
 
@@ -34,58 +34,12 @@ const MyList = () => {
   const loaded = useLoaderData();
   const [spots, setSpots] = useState([]);
 
-  // useEffect(() => {
-  //   console.log(usern);
-  //   setSpots(loaded.filter((spot) => spot.user_email === usern.email));
-  // }, []);
-
   useEffect(() => {
     setSpots(loaded.filter((spot) => spot.user_email === usern.email));
   }, [usern]);
 
-  const handleUpdate = (id, updatedSpot) => {
-    // Update the spot with the given id
-    const updatedSpots = spots.map((spot) =>
-      spot._id === id ? updatedSpot : spot
-    );
-    setSpots(updatedSpots);
-  };
-
-  // const handleDelete = _id => {
-  //   console.log(_id);
-
-  //   Swal.fire({
-  //     title: "Are you sure?",
-  //     text: "You won't be able to revert this!",
-  //     icon: "warning",
-  //     showCancelButton: true,
-  //     confirmButtonColor: "#3085d6",
-  //     cancelButtonColor: "#d33",
-  //     confirmButtonText: "Yes, delete it!"
-  //   }).then((result) => {
-  //     if (result.isConfirmed) {
-
-  //       fetch(`http://localhost:5000/touristspots/${_id}`,{ method: 'DELETE'})
-  //       .then(res => res.json())
-  //       .then(data =>{
-  //         console.log(data);
-  //         if(data.deletedCount>0){
-  //           Swal.fire({
-  //             title: "Deleted!",
-  //             text: "Your chosen Spot has been deleted.",
-  //             icon: "success"
-  //           });
-  //         }
-  //         window.location.reload();
-
-  //       })
-       
-  //     }
-  //   });
-  // };
 
   const handleDelete = _id => {
-    console.log(_id);
   
     Swal.fire({
       title: "Are you sure?",
@@ -147,7 +101,7 @@ const MyList = () => {
                 <button className='btn btn-sm bg-red-400' onClick={() => handleDelete(spot._id)}>Delete</button>
               </td>
               <td>
-                <button className='btn btn-sm bg-teal-600' onClick={() => handleUpdate(spot._id)}>Update</button>
+                <Link to={`/updatespots/${spot._id}`} className='btn btn-sm bg-teal-600' >Update</Link>
               </td>
             </tr>
           ))}
