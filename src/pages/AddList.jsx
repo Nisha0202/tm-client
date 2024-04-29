@@ -51,8 +51,7 @@ const AddList = () => {
               return;
           }
         console.log('Form data submitted:', formData);
-
-         fetch('http://localhost:5000//touristspots', {
+         fetch('http://localhost:5000/touristspots', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

@@ -22,7 +22,108 @@
       "seasonality": "Spring",
       "travel_time": "5 days",
       "total_visitors_per_year": 12000
-    }
-  
-  ]
+    },
+
+      {
+        "id": 3,
+        "image_url": "https://i.pinimg.com/564x/13/df/5a/13df5a42393d47378d6275644d5d3bee.jpg",
+        "tourists_spot_name": "Sagrada Familia",
+        "country_name": "Spain",
+        "location": "Barcelona",
+        "short_description": "Large unfinished Roman Catholic minor basilica",
+        "average_cost": 850,
+        "seasonality": "Spring",
+        "travel_time": "5 days",
+        "total_visitors_per_year": 3000
+      },
+      {
+        "id": 4,
+        "image_url": "https://i.pinimg.com/564x/d2/a8/e3/d2a8e3ddc10de3b46087d6918c606de6.jpg",
+        "tourists_spot_name": "Stonehenge",
+        "country_name": "England",
+        "location": "Wiltshire",
+        "short_description": "Prehistoric monument",
+        "average_cost": 500,
+        "seasonality": "Summer",
+        "travel_time": "3 days",
+        "total_visitors_per_year": 8000
+      },
+   
+      {
+        "id": 5,
+        "image_url": "https://i.pinimg.com/564x/9b/44/f9/9b44f9635e42013197b8d7eafcd93b4e.jpg",
+        "tourists_spot_name": "Louvre Museum",
+        "country_name": "France",
+        "location": "Paris",
+        "short_description": "World's largest art museum",
+        "average_cost": 1200,
+        "seasonality": "All Seasons",
+        "travel_time": "7 days",
+        "total_visitors_per_year": 15000
+      },
+      
+        {
+          "id": 6,
+          "image_url": "https://i.pinimg.com/564x/a2/88/c4/a288c4e320aea8c9563ee0b8f74a2ade.jpg",
+          "tourists_spot_name": "Leaning Tower of Pisa",
+          "country_name": "Italy",
+          "location": "Pisa",
+          "short_description": "Freestanding bell tower known for its tilt",
+          "average_cost": 600,
+          "seasonality": "Autumn",
+          "travel_time": "3 days",
+          "total_visitors_per_year": 5000
+        },
+        {
+          "id": 7,
+          "image_url": "https://i.pinimg.com/564x/5b/33/4e/5b334e4cc1ffd38c8b769c150b92e529.jpg",
+          "tourists_spot_name": "Alhambra",
+          "country_name": "Spain",
+          "location": "Granada",
+          "short_description": "Moorish palace and fortress complex",
+          "average_cost": 700,
+          "seasonality": "Summer",
+          "travel_time": "4 days",
+          "total_visitors_per_year": 6000
+        },
+        {
+          "id": 8,
+          "image_url": "https://i.pinimg.com/564x/9b/ce/50/9bce50348e275736f80f21e5b06a4a90.jpg",
+          "tourists_spot_name": "Tower Bridge",
+          "country_name": "England",
+          "location": "London",
+          "short_description": "Iconic Victorian turreted bridge",
+          "average_cost": 500,
+          "seasonality": "Winter",
+          "travel_time": "3 days",
+          "total_visitors_per_year": 10000
+        },
+        {
+          "id": 9,
+          "image_url": "https://i.pinimg.com/564x/a1/b8/9d/a1b89d4c93521823b942ab2326682e4e.jpg",
+          "tourists_spot_name": "Anne Frank House",
+          "country_name": "Netherlands",
+          "location": "Amsterdam",
+          "short_description": "Museum biographical of Anne Frank",
+          "average_cost": 300,
+          "seasonality": "Spring",
+          "travel_time": "2 days",
+          "total_visitors_per_year": 2000
+        },
+        {
+          "id": 10,
+          "image_url": "https://i.pinimg.com/564x/85/22/0a/85220ac825cfae6dc93439ac80fcf5f8.jpg",
+          "tourists_spot_name": "Matterhorn",
+          "country_name": "Switzerland",
+          "location": "Zermatt",
+          "short_description": "Iconic, pyramid-shaped peak in the Alps",
+          "average_cost": 1500,
+          "seasonality": "Winter",
+          "travel_time": "7 days",
+          "total_visitors_per_year": 7000
+        }
+      ]
+      
+    
+    
   
