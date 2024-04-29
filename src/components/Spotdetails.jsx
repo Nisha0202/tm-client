@@ -1,13 +1,28 @@
 import React, { useEffect, useState } from 'react';
 
-import { useLoaderData, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 const Spotdetails = () => {
-  const data = useLoaderData();
-  const { id } = useParams();
-  console.log('Data:', data); // Check if data is available
-  const spot = data.find((spot) => spot.id === parseInt(id));
-  console.log('Spot:', spot); // Check if spot is found
+  const  {id}  = useParams();
+  console.log(id);
+  const [spot, setSpot] = useState(null);
+  useEffect(() => {
+    fetch(`http://localhost:5000/touristspots/${id}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json(); // Parse response as JSON
+      })
+      .then(data => {
+        console.log('Received data:', data); // Log the data
+        setSpot(data);
+      })
+      .catch(error => console.error('Error:', error));
+  }, [id]);
+
+
+  
 
   if (!spot) {
       return <div>Loading...</div>;
@@ -38,3 +53,10 @@ const Spotdetails = () => {
 };
 
 export default Spotdetails;
+  // useEffect(() => {
+  //   // Fetch data from server
+  //   fetch(`http://localhost:5000/touristspots/${id}`)
+  //     .then(response => response.json())
+  //     .then(data => setSpot(data))
+  //     .catch(error => console.error(error));
+  // }, [id]);

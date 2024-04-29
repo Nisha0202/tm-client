@@ -6,12 +6,6 @@ export default function Spots() {
 
     const [data, setData] = useState([]);
 
-    // useEffect(() => {
-    //   fetch('spots.json')
-    //     .then(response => response.json())
-    //     .then(data => setData(data))
-    //     .catch(error => console.error('Error:', error));
-    // }, []);
       useEffect(() => {
       fetch('http://localhost:5000/touristspots')
         .then(response => response.json())

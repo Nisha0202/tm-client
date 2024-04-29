@@ -5,12 +5,9 @@ const Card = ({ spot, spots, setSpots}) => {
 // Inside your component
 const navigate = useNavigate();
   const {usern} = useContext(AuthContext);
-
   const handleView= () => {
     if (usern) {
-      // If usern exists, redirect to details/id
-      navigate(`/details/${spots.id}`);
-
+      navigate(`/details/${spot._id}`);
     } else {
       // If usern does not exist, redirect to /login
       navigate('/login');
@@ -24,7 +21,6 @@ const navigate = useNavigate();
       <h2 className='font-bold text-xl text-center'>{spot.tourists_spot_name}</h2>
       <p className='text-center text-wrap'>{spot.country_name}</p>
       <div className='btn w-full rounded-md text-white bg-teal-800 mt-2' onClick={handleView}>View Details</div>
-
     </div>
     </div>
   );
