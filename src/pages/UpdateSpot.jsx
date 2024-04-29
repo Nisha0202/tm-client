@@ -55,15 +55,15 @@ const UpdatedSpot = () => {
               });
               return;
           }
-        console.log('hi');
+        console.log(formData);
         console.log(spots._id);
-         fetch(`http://localhost:5000/touristspots/${spots._id}`, {
-        method: 'PUT',
-        headers: {
-            'content-type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-    })
+        fetch(`http://localhost:5000/touristspots/${spots._id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
         .then(res => res.json())
         .then(data => {
             console.log(data);
@@ -75,7 +75,11 @@ const UpdatedSpot = () => {
                 });
             }
         })
+        .catch(error => console.error('Error:', error));
+        
     };
+
+
     return (
         <div className='flex flex-col items-center justify-center min-h-screen'>
             <h2 className='text-2xl font-bold mb-6'>Add Tourists Spot (£)</h2>
