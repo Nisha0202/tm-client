@@ -18,6 +18,7 @@ import AddList from './pages/AddList';
 import MyList from './pages/MyList';
 import All from './pages/All';
 import Spotdetails from './components/Spotdetails';
+import CountrySpots from './pages/CountrySpots';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
         element: <Spotdetails />, 
         loader: () => fetch('http://localhost:5000/touristspots')
       
+    },
+    {
+      path: "/countryspot",
+      element: <CountrySpots />, 
+      loader: () => fetch('http://localhost:5000/touristspots')
     },
     
       {

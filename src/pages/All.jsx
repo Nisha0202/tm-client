@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useLoaderData } from 'react-router-dom';
 import Card from '../components/Card';
+import { Helmet } from 'react-helmet';
 export default function All() {
 
   const loaded = useLoaderData();
@@ -11,7 +12,12 @@ export default function All() {
   };
 
   return (
-    <>   <div className='w-full flex justify-end'><button className='btn btn-sm' onClick={handleSort}>sort</button></div>
+    <>  
+      <Helmet>
+        <title>TM - All Tourist Spots</title>
+      </Helmet>
+    
+     <div className='w-full flex justify-end'><button className='btn btn-sm' onClick={handleSort}>sort</button></div>
       <div className='flex flex-col lg:flex-row lg:flex-wrap items-center justify-between gap-8 my-12'>
        {
           spots.map(spot => <Card
@@ -26,3 +32,4 @@ export default function All() {
  
   )
 }
+

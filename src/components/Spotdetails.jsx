@@ -3,23 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom'
 
 const Spotdetails = () => {
-  // const  {id}  = useParams();
-  // console.log(id);
-  // const [spot, setSpot] = useState(null);
-  // useEffect(() => {
-  //   fetch(`http://localhost:5000/touristspots/${id}`)
-  //     .then(response => {
-  //       if (!response.ok) {
-  //         throw new Error('Network response was not ok');
-  //       }
-  //       return response.json(); // Parse response as JSON
-  //     })
-  //     .then(data => {
-  //       console.log('Received data:', data); // Log the data
-  //       setSpot(data);
-  //     })
-  //     .catch(error => console.error('Error:', error));
-  // }, [id]);
+
   const spots = useLoaderData();
   const { id } = useParams();
   const spot = spots.find(spot => spot._id === id);
@@ -40,13 +24,13 @@ const Spotdetails = () => {
             />
             </div>
           <div className='w-full *:text-xl *:py-2'>
-            <h2 className="font-bold text-2xl">{spot.tourists_spot_name}</h2>
-            <p className=" text-wrap">Country: {spot.country_name}</p>
-            <p className=" text-wrap">Description: {spot.short_description}</p>
-            <p className=" text-wrap">Average Cost: £{spot.average_cost}</p>
-            <p className=" text-wrap">Seasonality: {spot.seasonality}</p>
-            <p className=" text-wrap">Travel Time: {spot.travel_time}</p>
-            <p className=" text-wrap">Total Visitors Per Year: {spot.total_visitors_per_year}</p></div>
+            <h2 className="font-bold text-3xl">{spot.tourists_spot_name}</h2>
+            <p className=" text-wrap"><span className='inter text-base'>Country: </span>{spot.country_name}</p>
+            <p className=" text-wrap"><span className='inter text-base'>Description: </span> {spot.short_description}</p>
+            <p className=" text-wrap"><span className='inter text-base'>Average Cost: £</span>{spot.average_cost}</p>
+            <p className=" text-wrap"><span className='inter text-base'> Seasonality:</span> {spot.seasonality}</p>
+            <p className=" text-wrap"><span className='inter text-base'>Travel Time:</span> {spot.travel_time}</p>
+            <p className=" text-wrap"><span className='inter text-base'>Total Visitors Per Year: </span> {spot.total_visitors_per_year}</p></div>
          
         </div>
         </div>
