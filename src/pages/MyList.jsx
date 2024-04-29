@@ -25,36 +25,136 @@
 // }
 
 import React, { useState, useEffect, useContext } from 'react';
-import { useLoaderData, useLocation } from 'react-router-dom';
-import Card from '../components/Card';
+import { useLoaderData} from 'react-router-dom';
 import { AuthContext } from '../FirebaseProbider/FirbaseProvider';
+import Swal from 'sweetalert2';
 
-export default function MyList() { 
+const MyList = () => {
   const { usern } = useContext(AuthContext);
   const loaded = useLoaderData();
   const [spots, setSpots] = useState([]);
 
-  useEffect(() => {
-    setSpots(loaded.filter(spot => spot.user_email === usern.email));
-  }, [loaded]);
+  // useEffect(() => {
+  //   console.log(usern);
+  //   setSpots(loaded.filter((spot) => spot.user_email === usern.email));
+  // }, []);
 
-  const handleSort = () => {
-    const sortedSpots = [...spots].sort((a, b) => b.average_cost - a.average_cost);
-    setSpots(sortedSpots);
+  useEffect(() => {
+    setSpots(loaded.filter((spot) => spot.user_email === usern.email));
+  }, [usern]);
+
+  const handleUpdate = (id, updatedSpot) => {
+    // Update the spot with the given id
+    const updatedSpots = spots.map((spot) =>
+      spot._id === id ? updatedSpot : spot
+    );
+    setSpots(updatedSpots);
   };
+
+  // const handleDelete = _id => {
+  //   console.log(_id);
+
+  //   Swal.fire({
+  //     title: "Are you sure?",
+  //     text: "You won't be able to revert this!",
+  //     icon: "warning",
+  //     showCancelButton: true,
+  //     confirmButtonColor: "#3085d6",
+  //     cancelButtonColor: "#d33",
+  //     confirmButtonText: "Yes, delete it!"
+  //   }).then((result) => {
+  //     if (result.isConfirmed) {
+
+  //       fetch(`http://localhost:5000/touristspots/${_id}`,{ method: 'DELETE'})
+  //       .then(res => res.json())
+  //       .then(data =>{
+  //         console.log(data);
+  //         if(data.deletedCount>0){
+  //           Swal.fire({
+  //             title: "Deleted!",
+  //             text: "Your chosen Spot has been deleted.",
+  //             icon: "success"
+  //           });
+  //         }
+  //         window.location.reload();
+
+  //       })
+       
+  //     }
+  //   });
+  // };
+
+  const handleDelete = _id => {
+    console.log(_id);
+  
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then(result => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/touristspots/${_id}`, {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json' // Set the correct content type
+          }
+        })
+          .then(res => res.json())
+          .then(data => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your chosen spot has been deleted.",
+                icon: "success"
+              });
+            }
+            window.location.reload();
+          })
+          .catch(error => {
+            console.error("Error fetching data:", error);
+          });
+      }
+    });
+  };
+  
   return (
-    <> 
-      <div className='w-full flex justify-end'><button className='btn btn-sm' onClick={handleSort}>sort</button></div>
-      <div className='flex flex-col lg:flex-row lg:flex-wrap items-center justify-around gap-8 my-12'>
-        {
-          spots.map(spot => <Card
-            key={spot._id}
-            spot={spot}
-            spots={spots}
-            setspots={setSpots}
-          ></Card>)
-        }
-      </div>
-    </>
-  )
-}
+    <div className='overflow-x-auto'>
+      <table className='table table-zebra'>
+        <thead>
+          <tr>
+            {/* <th>Spot ID</th> */}
+            <th>User Email</th>
+            <th>Spot Name</th>
+            <th>Country</th>
+            <th>Average Cost</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {spots.map((spot) => (
+            <tr key={spot._id}>
+              {/* <td>{spot._id}</td> */}
+              <td>{spot.user_email}</td>
+              <td>{spot.tourists_spot_name}</td>
+              <td>{spot.country_name}</td>
+              <td>{spot.average_cost}</td>
+              <td>
+                <button className='btn btn-sm bg-red-400' onClick={() => handleDelete(spot._id)}>Delete</button>
+              </td>
+              <td>
+                <button className='btn btn-sm bg-teal-600' onClick={() => handleUpdate(spot._id)}>Update</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default MyList;

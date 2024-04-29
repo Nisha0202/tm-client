@@ -85,7 +85,7 @@ const AddList = () => {
                                 {key.charAt(0).toUpperCase() + key.slice(1)}
                             </label>
                             <input
-                                className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                                className='shadow appearance-none border bg-transparent rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                                 id={key}
                                 type='text'
                                 placeholder={key.charAt(0).toUpperCase() + key.slice(1)}
@@ -102,7 +102,7 @@ const AddList = () => {
                         Country Name
                     </label>
                     <select
-                        className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                        className='shadow appearance-none bg-transparent border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                         id='country_name'
                         name='country_name'
                         value={formData.country_name}
@@ -122,7 +122,7 @@ const AddList = () => {
                         User Name
                     </label>
                     <input
-                        className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                        className='shadow appearance-none bg-transparent border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                         id='user_name'
                         type='text'
                         placeholder='User Name'
@@ -138,7 +138,7 @@ const AddList = () => {
                         User Email
                     </label>
                     <input
-                        className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                        className='shadow appearance-none border bg-transparent rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                         id='user_email'
                         type='email'
                         placeholder='User Email'
