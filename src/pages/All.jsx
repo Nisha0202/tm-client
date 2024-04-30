@@ -26,7 +26,7 @@ export default function All() {
         <title>TM - All Tourist Spots</title>
       </Helmet>
     
-      <div className='w-full flex justify-end'><button className='btn btn-sm' onClick={handleSort}>sort</button></div>
+      <div className='w-full flex justify-end'><button className='btn btn-sm mx-4' onClick={handleSort}>sort by average cost</button></div>
       {loading ? (
         <div className="flex justify-center items-center h-screen">
           <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2  border-teal-500"></div>

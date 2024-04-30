@@ -10,14 +10,17 @@ export default function ErrorPage() {
         <Helmet>
       <title>Page Not Found</title>
     </Helmet>
-      <h1 className="text-3xl font-bold">404 Not Found</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
+    <div className="w-56 h-72 my-12 mx-auto">
+        <h1 className="text-3xl font-bold text-teal-700">404 Not Found</h1>
+      <p className="text-xl py-6">Sorry, an unexpected error has occurred.</p>
       <p>
         <i>{error.statusText || error.message}</i>
       </p>
       <div className="my-6 text-blue-600">
          <Link to={'/'}>Return Home</Link>
       </div>
+    </div>
+    
      
     </div>
   );

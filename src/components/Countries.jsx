@@ -25,9 +25,9 @@ export default function Countries() {
     }
 };
   return (
-    <div className='my-12 mx-auto flex flex-col items-center'> 
+    <div className='my-12 flex flex-col items-center justify-center'> 
       <h1 className='my-12 text-2xl font-bold'>Countries</h1>
-      <div className='flex flex-col max-w-64 md:max-w-screen-lg md:flex-row md:flex-wrap gap-6 md:gap-10 justify-between  mx-auto'>
+      <div className='flex flex-col max-w-fit md:max-w-screen-lg md:flex-row md:flex-wrap gap-4 md:gap-10 justify-between'>
       {countries.map((country) => (
   <div key={country.id} className="card p-4 w-72 min-h-72 border-2" onClick={() => handleClick(country.name)}>
     <img className='h-44 rounded-xl border-2 border-gray-300' src={country.image} alt={country.name} />
