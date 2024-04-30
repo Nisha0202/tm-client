@@ -43,45 +43,82 @@ const UpdatedSpot = () => {
     ];
 
 
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //       // Check if any required fields are empty (except for read-only ones)
+    //       const requiredFields = ['tourists_spot_name', 'location', 'short_description', 'average_cost', 'seasonality', 'travel_time', 'total_visitors_per_year'];
+    //       const emptyFields = requiredFields.filter((field) => !formData[field]);
+  
+    //       if (emptyFields.length > 0) {
+    //           Swal.fire({
+    //               icon: 'error',
+    //               title: 'Oops!',
+    //               text: `Please fill in the following required fields: ${emptyFields.join(', ')}`,
+    //           });
+    //           return;
+    //       }
+    //     console.log(formData);
+    //     console.log(spots._id);
+    //     fetch(`http://localhost:5000/touristspots/${spots._id}`, {
+    //         method: 'PUT',
+    //         headers: {
+    //             'content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify(formData)
+    //     })
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         console.log(data);
+    //             Swal.fire({
+    //                 icon: 'success',
+    //                 title: 'Form Updated!',
+    //                 text: 'Your data has been Updated successfully submitted.',
+    //             });
+            
+    //     })
+    //     .catch(error => console.error('Error:', error));
+        
+        
+    // };
+
     const handleSubmit = (e) => {
         e.preventDefault();
-          // Check if any required fields are empty (except for read-only ones)
-          const requiredFields = ['tourists_spot_name', 'location', 'short_description', 'average_cost', 'seasonality', 'travel_time', 'total_visitors_per_year'];
-          const emptyFields = requiredFields.filter((field) => !formData[field]);
-  
-          if (emptyFields.length > 0) {
-              Swal.fire({
-                  icon: 'error',
-                  title: 'Oops!',
-                  text: `Please fill in the following required fields: ${emptyFields.join(', ')}`,
-              });
-              return;
-          }
+        // Check if any required fields are empty (except for read-only ones)
+        const requiredFields = ['tourists_spot_name', 'location', 'short_description', 'average_cost', 'seasonality', 'travel_time', 'total_visitors_per_year'];
+        const emptyFields = requiredFields.filter((field) => !formData[field]);
+      
+        if (emptyFields.length > 0) {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops!',
+            text: `Please fill in the following required fields: ${emptyFields.join(', ')}`,
+          });
+          return;
+        }
+      
         console.log(formData);
         console.log(spots._id);
         fetch(`http://localhost:5000/touristspots/${spots._id}`, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(formData)
+          method: 'PUT',
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(formData)
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Form Updated!',
-                    text: 'Your data has been Updated successfully submitted.',
-                });
-            
+          console.log(data);
+          if(data.modifiedCount > 0){
+            Swal.fire({
+              icon: 'success',
+              title: 'Form Updated!',
+              text: 'Your data has been Updated successfully submitted.',
+            });
+          }
         })
         .catch(error => console.error('Error:', error));
-        
-        
-    };
-
-
+      };
+      
     return (
         <div className='flex flex-col items-center justify-center min-h-screen'>
                 <Helmet>

@@ -7,7 +7,7 @@ export default function UserProfile() {
 
     <div className='container flex flex-col items-center'>
     <Helmet>
-      <title>Luxury You - User Profile</title>
+      <title>TM - User Profile</title>
     </Helmet>
 
     <div className='min-h-40 text-center py-16 flex flex-col items-center gap-4'>

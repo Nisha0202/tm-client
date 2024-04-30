@@ -20,9 +20,9 @@ const MyList = () => {
       text: "You won't be able to revert this!",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!"
+      confirmButtonColor: "#bf312b",
+      cancelButtonColor: "#2b70bf",
+      confirmButtonText: "Delete"
     }).then(result => {
       if (result.isConfirmed) {
         fetch(`http://localhost:5000/touristspots/${_id}`, {
@@ -41,7 +41,14 @@ const MyList = () => {
                 icon: "success"
               });
             }
-            window.location.reload();
+            // reload
+
+            setTimeout(() => {
+              window.location.reload();
+            }, 3000);
+
+
+
           })
           .catch(error => {
             console.error("Error fetching data:", error);
