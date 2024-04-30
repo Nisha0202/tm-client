@@ -13,7 +13,6 @@ import SignUp from './pages/Signup';
 import FirbaseProvider from './FirebaseProbider/FirbaseProvider';
 import UpdateData from './pages/UpdateData';
 import UserProfile from './pages/UserProfile'
-import Clients from './pages/Clients'
 import AddList from './pages/AddList';
 import MyList from './pages/MyList';
 import All from './pages/All';
@@ -71,10 +70,6 @@ const router = createBrowserRouter([
         path: "/all",
         element: <All/>,
         loader: () => fetch('http://localhost:5000/touristspots')
-      },
-      {
-        path: "/clients",
-        element: <Clients/>,
       },
       {
         path: "/updatespots/:id",

@@ -53,7 +53,7 @@ export default function SignUp() {
     return (
         <div className='flex flex-col items-center gap-8 py-16 px-2'>
              <Helmet>
-        <title>Luxury You - Signup</title>
+        <title>TM - Signup</title>
       </Helmet>
             <form onSubmit={handleSubmit(onSubmit)} className='max-w-96 mx-auto flex flex-col items-center gap-6 inter'>
                 <label className="input input-bordered flex items-center gap-2 text-gray-600 w-full">
@@ -83,7 +83,7 @@ export default function SignUp() {
                 {formerror && <p className='text-xs font-bold max-w-xs text-wrap text-red-600'> {formerror}!</p>}
             </form>
             <p className='text-sm'>After regesiter you have to login to proceed.</p>
-            <div>Already joined? <Link to={'/login'} className='text-indigo-700'>Log In</Link></div>
+            <div>Already joined? <Link to={'/login'} className='text-teal-700 font-bold'>Log In</Link></div>
         </div>
     )
 }

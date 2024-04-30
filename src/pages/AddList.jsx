@@ -35,7 +35,6 @@ const AddList = () => {
         { value: 'Switzerland', label: 'Switzerland' },
     ];
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
           // Check if any required fields are empty (except for read-only ones)

@@ -47,7 +47,7 @@ export default function UpdateData() {
   return (
     <div>
          <Helmet>
-        <title>Luxury You - Update Data</title>
+        <title>TM - Update Data</title>
       </Helmet>
         <div className='flex flex-col items-center gap-8 py-16 px-2'>
             <form onSubmit={handleSubmit(onSubmit)} className='max-w-96 mx-auto flex flex-col items-center gap-6 inter'>
@@ -67,7 +67,7 @@ export default function UpdateData() {
                     <input type="text" className="grow" placeholder="Photo URL" name='photo'  defaultValue={usern.photoURL} 
                         {...register("image", { required: false })}/>
                 </label>
-                <button type='submit' className="btn w-full rounded-md text-white bg-indigo-700 font-bold">Update</button>
+                <button type='submit' className="btn w-full rounded-md text-white bg-teal-700 font-bold">Update</button>
             </form>
             {formError && <p className='text-xs text-red-500'>{formError}</p>}
 

@@ -1,27 +1,29 @@
 import React, { useContext, useEffect, useState} from 'react'
-import { AuthContext } from '../FirebaseProbider/FirbaseProvider'
 import Swal from 'sweetalert2';
 import { useLoaderData } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const UpdatedSpot = () => {
     const loaded = useLoaderData();
     const [spots, setSpots] = useState(loaded);
-    const { usern } = useContext(AuthContext);
 
-    //initial data
-    const [formData, setFormData] = useState({
-        image_url: spots.image_url,
-        tourists_spot_name: spots.tourists_spot_name,
-        country_name: spots.country_name,
-        location: spots.location,
-        short_description: spots.short_description,
-        average_cost: spots.average_cost,
-        seasonality: spots.seasonality,
-        travel_time: spots.travel_time,
-        total_visitors_per_year: spots.total_visitors_per_year,
-        user_name: usern.displayName, 
-        user_email: usern.email,
-    });
+    const [formData, setFormData] = useState({});
+    useEffect(() => {
+        setFormData({
+            image_url: spots.image_url,
+            tourists_spot_name: spots.tourists_spot_name,
+            country_name: spots.country_name,
+            location: spots.location,
+            short_description: spots.short_description,
+            average_cost: spots.average_cost,
+            seasonality: spots.seasonality,
+            travel_time: spots.travel_time,
+            total_visitors_per_year: spots.total_visitors_per_year,
+            user_name: spots.user_name, 
+            user_email: spots.user_email,
+        });
+    }, [spots]);
+    
     
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -67,22 +69,25 @@ const UpdatedSpot = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            if(data.modiefiedCount >0){
                 Swal.fire({
                     icon: 'success',
                     title: 'Form Updated!',
                     text: 'Your data has been Updated successfully submitted.',
                 });
-            }
+            
         })
         .catch(error => console.error('Error:', error));
+        
         
     };
 
 
     return (
         <div className='flex flex-col items-center justify-center min-h-screen'>
-            <h2 className='text-2xl font-bold mb-6'>Add Tourists Spot (£)</h2>
+                <Helmet>
+        <title>TM - Update Spots Data</title>
+      </Helmet>
+            <h2 className='text-2xl font-bold mb-6'>Update Tourists Spot (£)</h2>
             <form onSubmit={handleSubmit} className='w-full max-w-md bg-transparent border-2 rounded px-8 pt-6 pb-8 mb-4'>
                 {Object.keys(formData).map((key, index) => (
                     // Exclude data field

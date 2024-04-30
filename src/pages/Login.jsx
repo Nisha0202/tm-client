@@ -55,7 +55,7 @@ export default function Login() {
     return (
         <div className='flex flex-col items-center gap-8 py-16 px-2'>
          <Helmet>
-        <title>Luxury You - Login</title>
+        <title>TM - Login</title>
       </Helmet>
             <form onSubmit={handleSubmit(onSubmit)} className='max-w-96 mx-auto flex flex-col gap-6  inter'>
                 <label className="input input-bordered flex items-center gap-2 text-gray-600">
@@ -75,15 +75,15 @@ export default function Login() {
                 {formerror && <p className='text-red-800'> {formerror}</p>} */}
             </form>
             <div className='flex flex-col md:flex-row mx-auto gap-4'>
-                <button className="btn rounded-md bg-blue-300 flex items-center gap-2" onClick={() => githubLogin()}>
+                <button className="btn rounded-md bg-blue-300 text-gray-600 flex items-center gap-2" onClick={() => githubLogin()}>
                     <FaGithub /> Log In with Github
                 </button>
-                <button className="btn rounded-md bg-red-300  flex items-center gap-2" onClick={() => googleLogin()}>
+                <button className="btn rounded-md bg-red-300 text-gray-600  flex items-center gap-2" onClick={() => googleLogin()}>
                     <FaGoogle /> Log In with Google
                 </button>
             </div>
             <div>If you have already registered, please login.</div>
-            <div>New to join? <Link to={'/signup'} className='text-indigo-700'>Register</Link></div>
+            <div>New to join? <Link to={'/signup'} className='text-teal-700 font-bold'>Register</Link></div>
         </div>
     )
 }
