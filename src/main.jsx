@@ -32,13 +32,13 @@ const router = createBrowserRouter([
       {
         path: "/details/:id",
         element: <Spotdetails />, 
-        loader: () => fetch('http://localhost:5000/touristspots')
+        loader: () => fetch('https://tm-server-psi.vercel.app/touristspots')
       
     },
     {
       path: "/countryspot",
       element: <CountrySpots />, 
-      loader: () => fetch('http://localhost:5000/touristspots')
+      loader: () => fetch('https://tm-server-psi.vercel.app/touristspots')
     },
     
       {
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
       {
         path: "/list",
         element: <MyList/>,
-        loader: () => fetch('http://localhost:5000/touristspots')
+        loader: () => fetch('https://tm-server-psi.vercel.app/touristspots')
       },
       {
         path: "/addlist",
@@ -69,12 +69,12 @@ const router = createBrowserRouter([
       {
         path: "/all",
         element: <All/>,
-        loader: () => fetch('http://localhost:5000/touristspots')
+        loader: () => fetch('https://tm-server-psi.vercel.app/touristspots')
       },
       {
         path: "/updatespots/:id",
         element: <UpdatedSpot/>,
-        loader: ({params}) => fetch(`http://localhost:5000/touristspots/${params.id}`)
+        loader: ({params}) => fetch(`https://tm-server-psi.vercel.app/touristspots/${params.id}`)
       },
     ],
   },

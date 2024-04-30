@@ -7,7 +7,7 @@ export default function Spots() {
     const [data, setData] = useState([]);
 
       useEffect(() => {
-      fetch('http://localhost:5000/touristspots')
+      fetch('https://tm-server-psi.vercel.app/touristspots')
         .then(response => response.json())
         .then(data => setData(data))
         .catch(error => console.error('Error:', error));

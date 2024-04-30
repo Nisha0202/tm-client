@@ -59,7 +59,7 @@ const UpdatedSpot = () => {
     //       }
     //     console.log(formData);
     //     console.log(spots._id);
-    //     fetch(`http://localhost:5000/touristspots/${spots._id}`, {
+    //     fetch(`https://tm-server-psi.vercel.app/touristspots/${spots._id}`, {
     //         method: 'PUT',
     //         headers: {
     //             'content-type': 'application/json'
@@ -98,7 +98,7 @@ const UpdatedSpot = () => {
       
         console.log(formData);
         console.log(spots._id);
-        fetch(`http://localhost:5000/touristspots/${spots._id}`, {
+        fetch(`https://tm-server-psi.vercel.app/touristspots/${spots._id}`, {
           method: 'PUT',
           headers: {
             'content-type': 'application/json'

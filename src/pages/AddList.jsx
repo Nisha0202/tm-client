@@ -50,7 +50,7 @@ const AddList = () => {
               return;
           }
         console.log('Form data submitted:', formData);
-         fetch('http://localhost:5000/touristspots', {
+         fetch('https://tm-server-psi.vercel.app/touristspots', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

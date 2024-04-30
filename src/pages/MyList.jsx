@@ -25,7 +25,7 @@ const MyList = () => {
       confirmButtonText: "Delete"
     }).then(result => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/touristspots/${_id}`, {
+        fetch(`https://tm-server-psi.vercel.app/touristspots/${_id}`, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json' // Set the correct content type
@@ -45,7 +45,7 @@ const MyList = () => {
 
             setTimeout(() => {
               window.location.reload();
-            }, 3000);
+            }, 1000);
 
 
 
@@ -109,7 +109,7 @@ export default MyList;
 //    const [spots, setData] =useState([]);
 //    console.log(usern.email);
 //    useEffect(() => {
-//       fetch(`http://localhost:5000/touristspots/${usern.email}`)
+//       fetch(`https://tm-server-psi.vercel.app/touristspots/${usern.email}`)
 //         .then(response => response.json())
 //         .then(data => setData(data))
 //         .catch(error => console.error('Error:', error));

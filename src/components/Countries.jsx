@@ -8,7 +8,7 @@ export default function Countries() {
   const navigate = useNavigate(); // Change this line
 
   useEffect(() => {
-    fetch('http://localhost:5000/countries')
+    fetch('https://tm-server-psi.vercel.app/countries')
       .then(response => response.json())
       .then(data => setCountries(data))
       .catch(error => console.error(error));

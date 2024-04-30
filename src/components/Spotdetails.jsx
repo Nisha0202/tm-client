@@ -41,7 +41,7 @@ export default Spotdetails;
 
   // useEffect(() => {
   //   // Fetch data from server
-  //   fetch(`http://localhost:5000/touristspots/${id}`)
+  //   fetch(`https://tm-server-psi.vercel.app/touristspots/${id}`)
   //     .then(response => response.json())
   //     .then(data => setSpot(data))
   //     .catch(error => console.error(error));
