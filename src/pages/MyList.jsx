@@ -40,12 +40,17 @@ const MyList = () => {
                 text: "Your chosen spot has been deleted.",
                 icon: "success"
               });
+              //reintialize spots
+            setSpots(spots.filter((spot) => spot._id !== _id));
             }
+            
+            
+            
+            
             // reload
-
-            setTimeout(() => {
-              window.location.reload();
-            }, 1000);
+            // setTimeout(() => {
+            //   window.location.reload();
+            // }, 1000);
 
 
 

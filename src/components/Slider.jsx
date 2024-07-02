@@ -3,10 +3,10 @@ import { Fade } from "react-awesome-reveal";
 export default function Slider() {
   return (
     <div className='flex flex-col items-center justify-center'>
-      <div className='flex flex-col lg:flex-row gap-4 lg:justify-between items-center mt-12'>
+      <div className='flex flex-col lg:flex-row gap-4 lg:justify-between items-center mt-10'>
 
-        <div className="p-6 mx-4 md:my-4 text-center lg:text-left">
-          <Fade cascade> <h1 className='text-4xl font-bold '>Welcome to TM</h1>
+        <div className="p-6 mx-4 md:my-4 text-center lg:text-left z-0">
+          <Fade cascade> <h1 className='text-4xl font-bold lg:text-6xl'>Welcome to TM</h1>
             <p className='text-xl py-6'>Your favourate destination for finding amazing tourist spots in <span className='font-bold'>Euroupe</span>.</p>
 
           </Fade>
@@ -30,37 +30,37 @@ export default function Slider() {
           </div>
         </div>
 
-       
+
       </div>
-      <div className="stats md:mt-16 mt-10 p-6 border-2 flex flex-col md:flex-row justify-between">
-  <div className="stat w-full md:w-auto mb-4 md:mb-0">
-            <div className="stat-figure text-teal-700">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            </div>
-            <div className="stat-title">Happy Client</div>
-            <div className="stat-value">31K</div>
-            <div className="stat-desc">April 29, 2024</div>
+      <div className="stats md:mt-10 mt-10 p-3 border-2 flex flex-col md:flex-row justify-between">
+        <div className="stat w-full md:w-auto mb-4 md:mb-0">
+          <div className="stat-figure text-teal-700">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           </div>
-
-          <div className="stat w-full md:w-auto mb-4 md:mb-0">
-            <div className="stat-figure text-teal-700">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
-            </div>
-            <div className="stat-title">New Users</div>
-            <div className="stat-value">4,200</div>
-            <div className="stat-desc">↗︎ 400 (22%)</div>
-          </div>
-
-          <div className="stat w-full md:w-auto">
-            <div className="stat-figure text-teal-700">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
-            </div>
-            <div className="stat-title">New Registers</div>
-            <div className="stat-value">1,200</div>
-            <div className="stat-desc">↗︎ 90 (14%)</div>
-          </div>
-
+          <div className="stat-title">Happy Client</div>
+          <div className="stat-value text-3xl">31K</div>
+          <div className="stat-desc">April 29, 2024</div>
         </div>
+
+        <div className="stat w-full md:w-auto mb-4 md:mb-0">
+          <div className="stat-figure text-teal-700">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+          </div>
+          <div className="stat-title">New Users</div>
+          <div className="stat-value text-3xl">4,200</div>
+          <div className="stat-desc">↗︎ 400 (22%)</div>
+        </div>
+
+        <div className="stat w-full md:w-auto">
+          <div className="stat-figure text-teal-700">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
+          </div>
+          <div className="stat-title">New Registers</div>
+          <div className="stat-value text-3xl">1,200</div>
+          <div className="stat-desc">↗︎ 90 (14%)</div>
+        </div>
+
+      </div>
 
     </div>
 

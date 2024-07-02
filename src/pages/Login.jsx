@@ -70,7 +70,7 @@ export default function Login() {
                         {...register("pass", { required: true })} />
                     {errors.pass && <span className='text-xs text-red-500'>required field</span>}
                 </label>
-                <button type='submit' className="btn rounded-md text-white bg-indigo-700 font-bold">Log In</button>
+                <button type='submit' className="btn rounded-md text-white hover:bg-teal-700 bg-teal-900 font-bold">Log In</button>
 {/* 
                 {formerror && <p className='text-red-800'> {formerror}</p>} */}
             </form>

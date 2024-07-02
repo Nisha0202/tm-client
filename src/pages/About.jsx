@@ -3,7 +3,7 @@ import { Tooltip } from 'react-tooltip'
 export default function About() {
   return (
     <div>
-        <div className="container p-4">
+        <div className="p-4 mb-16">
             <h2 data-tooltip-id="my-tooltip" data-tooltip-content="About Us" className="text-2xl font-bold text-center my-4">About Us</h2>
             <p className="text-sm/relaxed max-w-3xl mx-auto inter text-center py-3 px-4">
             At TM Tourism Management, we specialize in curating unforgettable travel experiences across Europe. 

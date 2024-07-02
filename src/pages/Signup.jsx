@@ -79,7 +79,7 @@ export default function SignUp() {
                     {...register("pass", { required: true })}  />
                      {errors.pass && <span className='text-xs text-red-500'>required field</span>}
                 </label>
-                <button type='submit' className="btn w-full rounded-md text-white bg-indigo-700 font-bold">Register</button>
+                <button type='submit' className="btn w-full rounded-md text-white hover:bg-teal-700 bg-teal-900 font-bold">Register</button>
                 {formerror && <p className='text-xs font-bold max-w-xs text-wrap text-red-600'> {formerror}!</p>}
             </form>
             <p className='text-sm'>After regesiter you have to login to proceed.</p>

@@ -1,6 +1,6 @@
 # React + Vite
-https://github.com/programming-hero-web-course-4/B9A10-client-side-Nisha0202
-website- https://66310f07920bff2141caaa52--cheery-lokum-0cd4e9.netlify.app/
+## server side code -https://github.com/programming-hero-web-course-4/B9A10-client-side-Nisha0202
+## website- https://tm-tourist-management.netlify.app/
 # npm package:
 1. React + vite
 2. react router

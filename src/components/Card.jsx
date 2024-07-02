@@ -21,10 +21,10 @@ const navigate = useNavigate();
       <h2 className='font-bold text-xl text-center my-2'>{spot.tourists_spot_name}</h2>
       <p className='text-center text-lg text-wrap'>{spot.country_name}</p>
       <p className='text-center text-wrap'>Average Cost: {spot.average_cost}£</p>
-      <div><p className='text-center text-wrap py-3 text-sm/relaxed'> {spot.short_description}</p></div>
-      <div className='flex justify-between mb-3'>
+      <div><p className='text-center text-wrap py-3 text-sm/relaxed font-semibold h-16'> {spot.short_description}</p></div>
+      {/* <div className='flex justify-between mb-3'>
         <p className='text-center text-wrap '> {spot.seasonality}</p>
-        <p className='text-center text-wrap '> {spot.location}</p></div>
+        <p className='text-center text-wrap '> {spot.location}</p></div> */}
       <div className='btn w-full rounded-md text-white bg-teal-800 mt-2' onClick={handleView} data-tooltip-id="my-tooltip" data-tooltip-content="Click to see more">View Details</div>
     </div>
     <Tooltip id="my-tooltip" />

@@ -38,7 +38,7 @@ const AddList = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
           // Check if any required fields are empty (except for read-only ones)
-          const requiredFields = ['tourists_spot_name', 'location', 'short_description', 'average_cost', 'seasonality', 'travel_time', 'total_visitors_per_year'];
+          const requiredFields = ['country_name','tourists_spot_name', 'location', 'short_description', 'average_cost', 'seasonality', 'travel_time', 'total_visitors_per_year'];
           const emptyFields = requiredFields.filter((field) => !formData[field]);
   
           if (emptyFields.length > 0) {
@@ -148,8 +148,8 @@ const AddList = () => {
                     />
                 </div>
 
-                <div className='flex items-center justify-end'>
-                    <button className=' hover:bg-teal-700 bg-teal-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' type='submit'>
+                <div className='flex items-center justify-center'>
+                    <button className='w-full hover:bg-teal-700 bg-teal-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' type='submit'>
                         Submit
                     </button>
                 </div>
