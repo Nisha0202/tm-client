@@ -1,5 +1,5 @@
 # React + Vite
-## server side code -https://github.com/programming-hero-web-course-4/B9A10-client-side-Nisha0202
+## server side code- https://github.com/programming-hero-web-course-4/B9A10-client-side-Nisha0202
 ## website- https://tm-tourist-management.netlify.app/
 # npm package:
 1. React + vite
